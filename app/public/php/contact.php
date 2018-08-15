@@ -11,7 +11,7 @@ if ( isset($_POST['email']) && isset($_POST['name']) && isset($_POST['subject'])
   }
 
   // Replace "yourmail@domain.com" with your email
-  mail( "yourmail@domain.com", $_POST['subject'], $_POST['message'], "From:" . $_POST['email'] );
+  mail( "gabrielpardi@outlook.com", $_POST['subject'], $_POST['message'], "From:" . $_POST['email'] );
 
 }
 ?>

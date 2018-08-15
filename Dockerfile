@@ -1,13 +1,12 @@
 FROM node
 
-# create app directory
-WORKDIR /usr/src/app
+RUN mkdir /src
 
-COPY package*.json ./
-RUN npm install
-COPY . .
+# create app directory
+WORKDIR /src
+ADD app/package.json /src/package.json
+# RUN npm install
+
 EXPOSE 8080
 
-CMD ["npm", "start"]
-
-
+# CMD npm start
