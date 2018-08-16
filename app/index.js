@@ -3,7 +3,4 @@ var app = express();
 
 app.use(express.static("public"));
 
-app.listen(8080, () => {
-    console.log("On air!!");
-    console.log("teste");
-});
+app.listen(8080);
