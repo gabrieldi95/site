@@ -10,7 +10,7 @@
     <meta name="author" content="themesit.com">
     <link rel="icon" href="img/favicon.ico">
 
-    <title>{{name}}</title>
+    <title>Gabriel Di Pardi Arruda</title>
 
     <!-- ICON FONTS -->
     <link rel="stylesheet" href="css/vendor/pe-icon-7-combo.css">
@@ -138,47 +138,14 @@
 
           <div class="progress-bars p-t-30">
 
-            <div class="progress-info">Node.js</div>
-            <div class="progress">
-              <div class="progress-bar anim" data-percent="75">
-                <span class="value">75%</span>
-              </div>
-            </div>
-
-            <div class="progress-info">Python</div>
-            <div class="progress">
-              <div class="progress-bar anim" data-percent="70">
-                <span class="value">70%</span>
-              </div>
-            </div>
-
-            <div class="progress-info">Linux</div>
-            <div class="progress">
-              <div class="progress-bar anim" data-percent="80">
-                <span class="value">80%</span>
-              </div>
-            </div>
-
-            <div class="progress-info">DevOps</div>
-            <div class="progress">
-              <div class="progress-bar anim" data-percent="80">
-                <span class="value">80%</span>
-              </div>
-            </div>
-
-            <div class="progress-info">Criatividade</div>
-            <div class="progress">
-              <div class="progress-bar anim" data-percent="90">
-                <span class="value">90%</span>
-              </div>
-            </div>
-
-            <div class="progress-info">League of Legends</div>
-            <div class="progress">
-              <div class="progress-bar anim" data-percent="60">
-                <span class="value">60%</span>
-              </div>
-            </div>
+            {% for skill in skills %}
+                <div class="progress-info">{{skill.name}}</div>
+                <div class="progress">
+                    <div class="progress-bar anim" data-percent={{skill.percent}}>
+                        <span class="value">{{skill.percent}}%</span>
+                    </div>
+                </div>
+            {% endfor %}
 
           </div>
         </div>

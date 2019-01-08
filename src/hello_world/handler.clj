@@ -6,9 +6,16 @@
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]])
           (:gen-class))
 
+(def skills [{:name "Node.JS" :percent "85"}
+             {:name "Linux" :percent "75"}
+             {:name "DevOps" :percent "65"}
+             {:name "Clojure" :percent "40"} 
+             {:name "Criatividade" :percent "90"}
+             {:name "Cloud" :percent "60"}
+             {:name "League of Legends" :percent "80"}])
 
 (defroutes app-routes
-  (GET "/" [] (render-file "public/index.html" {:name "Gabriel Di Pardi Arruda"}))
+  (GET "/" [] (render-file "public/index.html" {:skills skills }))
   (route/not-found "Not Found"))
 
 (def app
