@@ -1,6 +1,6 @@
 # Site pessoal
 
-[www.gabrieldi.me](www.gabrieldi.me)
+[www.gabrieldi.me](http://www.gabrieldi.me)
 
 ## Prerequisites
 
