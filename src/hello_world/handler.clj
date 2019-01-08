@@ -8,7 +8,7 @@
 
 
 (defroutes app-routes
-  (GET "/" [] (render-file "public/index.html" {:name "John"}))
+  (GET "/" [] (render-file "public/index.html" {:name "Gabriel Di Pardi Arruda"}))
   (route/not-found "Not Found"))
 
 (def app
