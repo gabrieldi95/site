@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gabriel Di Pardi Arruda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <form action="/admin" method="POST">
+        <!--{% for skill in skills %}
+            <div>
+                <label for="skill">Conhecimento:</label>
+                <input type="text" id="name" name="skill_name" value={{skill.name}}>
+                <input type="number" id="name" name="skill_percent" value={{skill.percent}}>
+                <button type="button" id="update-button" >Modificar</button>
+            </div>
+        {% endfor %}-->
+        <div>
+            <label for="skill">Conhecimento:</label>
+            <input type="text" id="name" name="skill_name">
+            <input type="number" id="name" name="skill_percent">
+        </div>
+        <div>
+            <button type="button" id="add-button">Adicionar</button>
+        </div>
+        
+    </form>
+
+    <script>
+        $(document).ready(function(){
+            $("#add-button").click(function(event) {
+                $.post("/add/skill", $('form').serialize(), function(data){
+                    alert("Data: " + data);
+                })
+            })
+        });
+    </script>
+
+</body>
+</html>

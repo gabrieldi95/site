@@ -14,12 +14,22 @@
              {:name "Cloud" :percent "60"}
              {:name "League of Legends" :percent "80"}])
 
+(defn get-document [params]
+    (def skills (conj skills {:name (str (get params :skill_name)) :percent (str (get params :skill_percent))}))
+    (println params)
+    (println skills)
+    "resposta")
+
 (defroutes app-routes
   (GET "/" [] (render-file "public/index.html" {:skills skills }))
+  (GET "/admin" [] (render-file "public/admin.html" {:skills skills }))
+  (POST "/add/skill" request (get-document (get request :params) ) )
   (route/not-found "Not Found"))
 
 (def app
-  (wrap-defaults app-routes site-defaults))
+  (wrap-defaults 
+    app-routes 
+    (assoc-in site-defaults [:security :anti-forgery] false)))
 
 (defn -main
   [& [port]]
