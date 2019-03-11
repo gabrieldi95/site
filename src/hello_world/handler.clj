@@ -9,9 +9,9 @@
 (def skills [{:name "Node.JS" :percent "85"}
              {:name "Linux" :percent "75"}
              {:name "DevOps" :percent "65"}
-             {:name "Clojure" :percent "40"} 
+             {:name "Scala" :percent "60"} 
              {:name "Criatividade" :percent "90"}
-             {:name "Cloud" :percent "60"}
+             {:name "Cloud" :percent "70"}
              {:name "League of Legends" :percent "80"}])
 
 (defn get-document [params]
